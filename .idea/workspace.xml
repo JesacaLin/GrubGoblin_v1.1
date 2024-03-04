@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdaadf73-f95f-436e-a546-20c5a123fa29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/AddressConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/Deals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/DealsAvailability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/DocReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/DocWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/Establishment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/IDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/ReadableWriteableWithID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/JesacaLin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
