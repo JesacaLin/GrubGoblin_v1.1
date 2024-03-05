@@ -2,21 +2,19 @@ package org.JesacaLin;
 import java.time.DayOfWeek;
 import java.util.*;
 public class UserInput {
-    private String userInput;
-
-    Scanner scanner = new Scanner(System.in)
-    public String getStringInput(String prompt) {
+    public static String getStringInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        String userInput = "";
         try {
             System.out.println(prompt);
             userInput = scanner.nextLine().toLowerCase();
         } catch (NullPointerException e) {
             System.out.println("Please enter an answer!");
-        } finally {
-            scanner.close();
         }
         return userInput;
     }
-    public List<DayOfWeek> getDaysOfWeekInput(String prompt) {
+    public static List<DayOfWeek> getDaysOfWeekInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
         //please list days that the deal is available, if multiple, please separate by a common.
         //Display prompt
         System.out.println(prompt);
@@ -33,6 +31,8 @@ public class UserInput {
                 System.out.println(day + " is not a valid day of the week. Please try again");
             }
         }
+
         return listOfDays;
     }
+
 }
