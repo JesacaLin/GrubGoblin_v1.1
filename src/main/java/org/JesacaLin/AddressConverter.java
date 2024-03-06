@@ -2,7 +2,7 @@ package org.JesacaLin;
 import java.util.*;
 public class AddressConverter {
     //Must also chance the environment variable in intellij for this to run.
-    //Need to restrict the api but...Google doc mentioned I can't if I want to use the geolocation services??  
+    //Need to restrict the api but...Google doc mentioned I can't if I want to use the geolocation services??
     private static final String API_Key = System.getenv("MY_GOOGLE_API_KEY");
     public static double[] convertAddressToCoordinates(String address) {
         //Check if the API key is set
