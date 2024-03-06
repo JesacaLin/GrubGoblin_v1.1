@@ -1,10 +1,12 @@
 package org.JesacaLin;
 
+import java.util.Arrays;
+
 public class Establishment implements ReadableWriteableWithID {
     private String name;
     private String address;
     private String id;
-    private double coordinates;
+    private double[] coordinates;
 
     public Establishment(String name, String address) {
         this.id = getId();
@@ -18,8 +20,8 @@ public class Establishment implements ReadableWriteableWithID {
         return IDGenerator.generateID("establishment");
     }
 
-    public double getCoordinates() {
-        return AddressConverter.getLatitude() + AddressConverter.getLongitude();
+    public double[] getCoordinates() {
+        return AddressConverter.convertAddressToCoordinates(address);
     }
 
     public String getName() {return name;}
@@ -31,6 +33,6 @@ public class Establishment implements ReadableWriteableWithID {
 
     @Override
     public String toString() {
-        return id + " , " + name + " , " + address + " , " + coordinates;
+        return id + " , " + name + " , " + address + " , " + Arrays.toString(coordinates);
     }
 }
