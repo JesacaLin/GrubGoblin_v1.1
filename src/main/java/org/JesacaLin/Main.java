@@ -24,8 +24,10 @@ public class Main {
 
             //ADDING A DEAL
             if (menuInput.equals("1")) {
-                String testing = UserInput.getStringInput("What is the name?");
-                System.out.println(testing);
+                String userInputName = UserInput.getStringInput("What is the name of the establishment?");
+                String userInputAddress = UserInput.getStringInput("What is the full address?");
+                Establishment newEstablishment = new Establishment(userInputName, userInputAddress);
+                System.out.println(newEstablishment.toString());
             }
             if (menuInput.equals("2")) {}
             if (menuInput.equals("3")) {}
