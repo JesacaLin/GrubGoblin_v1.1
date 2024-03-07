@@ -19,7 +19,6 @@ public class Main {
                     | 5: Exit                                       |
                     -------------------------------------------------
                     """);
-            //String menuInput = scanner.nextLine().toLowerCase();
             String menuInput = UserInput.getStringInput(menu);
 
             //ADDING A DEAL
@@ -28,7 +27,7 @@ public class Main {
                 String userInputAddress = UserInput.getStringInput("What is the full address?");
                 Establishment newEstablishment = new Establishment(userInputName, userInputAddress);
                 String establishedId = newEstablishment.getId();
-
+                System.out.println(newEstablishment.toString());
                 String typeOfDeal = ("""
                     --------------------------
                     |  What type of deal?    |
@@ -46,7 +45,7 @@ public class Main {
                 String dealId = newDeal.getId();
 
                 String userInputDays = UserInput.getStringInput("What day is this deal available? If more than multiple days, separate with a ',' ");
-                
+
                 DealsAvailability dealsAvailability = new DealsAvailability(dealId, userInputDays);
             }
             if (menuInput.equals("2")) {}
