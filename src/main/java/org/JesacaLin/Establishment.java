@@ -17,7 +17,8 @@ public class Establishment implements ReadableWriteableWithID {
 
     @Override
     public String getId() {
-        return IDGenerator.generateID("establishment");
+        id = IDGenerator.generateID("establishment");
+        return id;
     }
 
     public double[] getCoordinates() {

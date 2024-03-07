@@ -1,4 +1,5 @@
 package org.JesacaLin;
+import java.time.DayOfWeek;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
@@ -6,7 +7,6 @@ public class Main {
         while (true) {
             //MENU - Intellij suggested I change it to a text block.
             String menu = ("""
-                                        
                     -------------------------------------------------
                     |   GRUB GOBLIN: Your Food Deals Directory      |
                     -------------------------------------------------
@@ -27,7 +27,27 @@ public class Main {
                 String userInputName = UserInput.getStringInput("What is the name of the establishment?");
                 String userInputAddress = UserInput.getStringInput("What is the full address?");
                 Establishment newEstablishment = new Establishment(userInputName, userInputAddress);
-                System.out.println(newEstablishment.toString());
+                String establishedId = newEstablishment.getId();
+
+                String typeOfDeal = ("""
+                    --------------------------
+                    |  What type of deal?    |
+                    --------------------------
+                    | 1: Drinks Deal         |
+                    | 2: Food Deal           |
+                    | 3: Grocery Deal        |
+                    | 4: Other               |
+                    --------------------------
+                    """);
+                String userInputTypeOfDeal = UserInput.getStringInput(typeOfDeal);
+                String userInputDealDetails = UserInput.getStringInput("Please provide details of the deal");
+
+                Deals newDeal = new Deals(establishedId, userInputTypeOfDeal, userInputDealDetails);
+                String dealId = newDeal.getId();
+
+                String userInputDays = UserInput.getStringInput("What day is this deal available? If more than multiple days, separate with a ',' ");
+                
+                DealsAvailability dealsAvailability = new DealsAvailability(dealId, userInputDays);
             }
             if (menuInput.equals("2")) {}
             if (menuInput.equals("3")) {}
