@@ -22,6 +22,7 @@ public class Establishment implements ReadableWriteableWithID {
     }
 
     public double[] getCoordinates() {
+
         return AddressConverter.convertAddressToCoordinates(address);
     }
 

@@ -15,7 +15,6 @@ public class UserInput {
     }
     public static List<DayOfWeek> getDaysOfWeekInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
-        //please list days that the deal is available, if multiple, please separate by a common.
         //Display prompt
         System.out.println(prompt);
         //Initialize new ArrayList to store DayOfWeek;

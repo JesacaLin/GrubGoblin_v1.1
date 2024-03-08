@@ -23,11 +23,15 @@ public class Main {
 
             //ADDING A DEAL
             if (menuInput.equals("1")) {
+                //Gathering Establishment Data
                 String userInputName = UserInput.getStringInput("What is the name of the establishment?");
                 String userInputAddress = UserInput.getStringInput("What is the full address?");
+                //Create new Establishment Instance
                 Establishment newEstablishment = new Establishment(userInputName, userInputAddress);
                 String establishedId = newEstablishment.getId();
-                System.out.println(newEstablishment.toString());
+                //System.out.println(newEstablishment.toString());
+
+                //Gathering Deal data
                 String typeOfDeal = ("""
                     --------------------------
                     |  What type of deal?    |
@@ -39,14 +43,22 @@ public class Main {
                     --------------------------
                     """);
                 String userInputTypeOfDeal = UserInput.getStringInput(typeOfDeal);
+
                 String userInputDealDetails = UserInput.getStringInput("Please provide details of the deal");
 
+                //Creating new Deals Instance
                 Deals newDeal = new Deals(establishedId, userInputTypeOfDeal, userInputDealDetails);
                 String dealId = newDeal.getId();
+                System.out.println(newDeal.toString());
 
+                //Gathering Deals Availability data
                 String userInputDays = UserInput.getStringInput("What day is this deal available? If more than multiple days, separate with a ',' ");
 
-                DealsAvailability dealsAvailability = new DealsAvailability(dealId, userInputDays);
+                //Create new Deals Availability instance
+                DealsAvailability instance = DealsAvailability.createInstance(dealId,  userInputDays);
+                assert instance != null;
+
+                System.out.println(instance.toString());
             }
             if (menuInput.equals("2")) {}
             if (menuInput.equals("3")) {}
