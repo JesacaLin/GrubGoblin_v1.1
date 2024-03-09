@@ -9,6 +9,7 @@ public class DocReader  {
         try (Scanner dataInput = new Scanner(dataFile)) {
             while (dataInput.hasNextLine()) {
                 String lineOfInput = dataInput.nextLine();
+                //if lineOfInput contains
                 System.out.println(lineOfInput);
             }
         } catch (FileNotFoundException e) {

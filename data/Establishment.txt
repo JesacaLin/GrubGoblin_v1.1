@@ -1,1 +1,2 @@
 
+ESTABLISHMENT_cee946bc-255b-4095-a9ce-edfb5f936a07,vine bar,81 fleet pl, brooklyn ny 11201,[40.69321679999999, -73.98157549999999]
