@@ -3,6 +3,8 @@ import java.time.DayOfWeek;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
+        Map<String, String> establishmentMap = new HashMap<>();
+        Map<String, String> dealsMap = new HashMap<>();
 
         while (true) {
 
@@ -28,14 +30,21 @@ public class Main {
                 String userInputAddress = UserInput.getStringInput("What is the full address?");
 
                 //Create new Establishment Instance
-                Establishment newEstablishment = new Establishment(userInputName, userInputAddress);
-                String establishedId = newEstablishment.getId();
+                Establishment establishmentInstance = new Establishment(userInputName, userInputAddress);
+                String establishedId = establishmentInstance.getId();
 
                 //Write Establishment to doc
-                String establishmentData = newEstablishment.toString();
-                DocWriter.writer("data/Establishment.txt", establishmentData);
+                String filePath = "data/Establishment.txt";
+                String establishmentData = establishmentInstance.toString();
+                DocWriter.writer(filePath, establishmentData);
 
-                System.out.println(newEstablishment.toString());
+                //Populating Establishment Map
+                //String[] parts = establishmentData.split("\\|", 2);
+                //establishmentMap.put(parts[0], parts[1]);
+
+                System.out.println(establishmentInstance.toString());
+
+
                 //Gathering Deal data
                 String typeOfDeal = ("""
                     --------------------------
@@ -75,12 +84,8 @@ public class Main {
                 //Reading the docs
                 //make a new map, then display relevant info to the user rather than the id as well
                 String filePath = "data/Establishment.txt";
-                Map<String, String> establishmentMap = DocReader.reader(filePath);
-                if (!establishmentMap.isEmpty()) {
-                    for(Map.Entry<String, String> entry : establishmentMap.entrySet()) {
-                        System.out.println(entry.getValue());
-                    }
-                }
+                DocReader.reader(filePath);
+
             }
             if (menuInput.equals("3")) {
                 String typeOfDeal = ("""
@@ -95,8 +100,21 @@ public class Main {
                     """);
                 String userInput = UserInput.getStringInput(typeOfDeal);
                 //Reading the docs
-                String filePath = "data/Deals.txt";
-                DocReader.dealsTypeReader(filePath, userInput);
+                String filePathDeals = "data/Deals.txt";
+                dealsMap = DocReader.dealsTypeReader(filePathDeals, userInput);
+
+                String filePathEstablishment = "data/Establishment.txt";
+                establishmentMap = DocReader.establishmentReader(filePathEstablishment);
+                if (!dealsMap.isEmpty()) {
+                    for(Map.Entry<String, String> dealEntry : dealsMap.entrySet()) {
+                        String dealEntryValue = dealEntry.getValue();
+                        String[] parts = dealEntryValue.split("\\|");
+                        String establishmentID = parts[0];
+                        String type = parts[1];
+                        String detail = parts[2];
+                        System.out.println(type + "  @  " + establishmentMap.get(establishmentID) + "  --->  " + detail);
+                    }
+                }
             }
             if (menuInput.equals("4")) {}
 
