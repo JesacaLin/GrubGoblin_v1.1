@@ -1,5 +1,4 @@
 package org.JesacaLin;
-
 import java.util.Arrays;
 
 public class Establishment implements ReadableWriteableWithID {
@@ -35,6 +34,6 @@ public class Establishment implements ReadableWriteableWithID {
 
     @Override
     public String toString() {
-        return id + "," + name + "," + address + "," + Arrays.toString(coordinates);
+        return id + "|" + name + "|" + address + "|" + Arrays.toString(coordinates);
     }
 }

@@ -1,2 +1,6 @@
 
-ESTABLISHMENT_cee946bc-255b-4095-a9ce-edfb5f936a07,vine bar,81 fleet pl, brooklyn ny 11201,[40.69321679999999, -73.98157549999999]
+ESTABLISHMENT_cee946bc-255b-4095-a9ce-edfb5f936a07|vine bar|81 fleet pl, brooklyn ny 11201|[40.69321679999999, -73.98157549999999]
+ESTABLISHMENT_0ec14f97-1b37-40e7-ad37-a841761efbb8|sixpoint brewery|445 gold street, brooklyn, ny 11201|[40.6909393, -73.9830628]
+ESTABLISHMENT_416af964-b0bc-4f7f-973c-d7274e316f3c|umi|3 chrome-2-8 minato city, minamiaoyama, tokyo|[35.6695345, 139.7225742]
+ESTABLISHMENT_6c49ab44-2465-4782-b3eb-ade2b3cd32a3|elsa|136 atlantic ave, brooklyn ny 11201|[40.6902602, -73.9953761]
+ESTABLISHMENT_d0dc0eb5-0972-4693-89b8-437781a2db78|piazza duomo|piazza risorgimento, 4, 12051 alba cn, italy|[44.7006229, 8.035891099999999]

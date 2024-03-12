@@ -35,7 +35,7 @@ public class Deals implements ReadableWriteableWithID {
 
     @Override
     public String toString() {
-        return id + "," + establishmentId + "," + typeOfDeal + "," + dealDetails;
+        return id + "|" + establishmentId + "|" + typeOfDeal + "|" + dealDetails;
     }
 
 }

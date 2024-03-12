@@ -4,11 +4,11 @@ import com.google.maps.GeocodingApi;
 import com.google.maps.model.GeocodingResult;
 import java.util.*;
 public class AddressConverter {
-    //Must also change the environment variable in intellij for this to run.
     //Need to restrict the api...
     //Look up more methods in Google Maps Service library for java.
-    //way to shut down the api after use.
+    //need to shut down the api after use.
     private static final String API_Key = System.getenv("MY_GOOGLE_API_KEY");
+    //GeoApiContext is an object that is used to interact with the google maps api, built with the api key and other methods.
     private static final GeoApiContext context = new GeoApiContext.Builder().apiKey(API_Key).maxRetries(3).build();
     public static double[] convertAddressToCoordinates(String address) {
         //Check if the API key is set

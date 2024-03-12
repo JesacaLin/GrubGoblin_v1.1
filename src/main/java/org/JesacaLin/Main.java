@@ -13,8 +13,8 @@ public class Main {
                     |  Please enter your selection from the menu    |
                     -------------------------------------------------
                     | 1: Add a deal                                 |
-                    | 2: See all deals                              |
-                    | 3: See all restaurants with deals             |
+                    | 2: See all establishments with deals          |
+                    | 3: See specific types of deals                |
                     | 4: See deals on a specific date               |
                     | 5: Exit                                       |
                     -------------------------------------------------
@@ -35,7 +35,7 @@ public class Main {
                 String establishmentData = newEstablishment.toString();
                 DocWriter.writer("data/Establishment.txt", establishmentData);
 
-
+                System.out.println(newEstablishment.toString());
                 //Gathering Deal data
                 String typeOfDeal = ("""
                     --------------------------
@@ -73,11 +73,33 @@ public class Main {
             }
             if (menuInput.equals("2")) {
                 //Reading the docs
+                //make a new map, then display relevant info to the user rather than the id as well
                 String filePath = "data/Establishment.txt";
-                DocReader.reader(filePath);
+                Map<String, String> establishmentMap = DocReader.reader(filePath);
+                if (!establishmentMap.isEmpty()) {
+                    for(Map.Entry<String, String> entry : establishmentMap.entrySet()) {
+                        System.out.println(entry.getValue());
+                    }
+                }
             }
-            if (menuInput.equals("3")) {}
+            if (menuInput.equals("3")) {
+                String typeOfDeal = ("""
+                    ---------------------------------
+                    |  What are you looking for?    |
+                    ---------------------------------
+                    | 1: Drinks Deal                |
+                    | 2: Food Deal                  |
+                    | 3: Grocery Deal               |
+                    | 4: Other                      |
+                    ---------------------------------
+                    """);
+                String userInput = UserInput.getStringInput(typeOfDeal);
+                //Reading the docs
+                String filePath = "data/Deals.txt";
+                DocReader.dealsTypeReader(filePath, userInput);
+            }
             if (menuInput.equals("4")) {}
+
             if (menuInput.equals("5")) {
                 break;
             }

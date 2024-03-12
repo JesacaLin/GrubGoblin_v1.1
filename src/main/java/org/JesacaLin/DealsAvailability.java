@@ -40,6 +40,6 @@ public class DealsAvailability implements ReadableWriteableWithID {
     }
     @Override
     public String toString() {
-        return id + "," + dealId + "," + listOfDays;
+        return id + "|" + dealId + "|" + listOfDays;
     }
 }
