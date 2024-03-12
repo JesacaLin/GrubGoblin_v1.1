@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Map<String, String> establishmentMap = new HashMap<>();
         Map<String, String> dealsMap = new HashMap<>();
+        Map<String, List<String>> daysMap = new HashMap<>();
 
         while (true) {
 
@@ -38,12 +39,9 @@ public class Main {
                 String establishmentData = establishmentInstance.toString();
                 DocWriter.writer(filePath, establishmentData);
 
-                //Populating Establishment Map
-                //String[] parts = establishmentData.split("\\|", 2);
-                //establishmentMap.put(parts[0], parts[1]);
-
                 System.out.println(establishmentInstance.toString());
-
+                System.out.println("*".repeat(12));
+                System.out.println("\n".repeat(1));
 
                 //Gathering Deal data
                 String typeOfDeal = ("""
@@ -82,10 +80,9 @@ public class Main {
             }
             if (menuInput.equals("2")) {
                 //Reading the docs
-                //make a new map, then display relevant info to the user rather than the id as well
                 String filePath = "data/Establishment.txt";
                 DocReader.reader(filePath);
-
+                System.out.println("\n".repeat(1));
             }
             if (menuInput.equals("3")) {
                 String typeOfDeal = ("""
@@ -112,11 +109,34 @@ public class Main {
                         String establishmentID = parts[0];
                         String type = parts[1];
                         String detail = parts[2];
+
                         System.out.println(type + "  @  " + establishmentMap.get(establishmentID) + "  --->  " + detail);
+                        System.out.println("*".repeat(12));
                     }
                 }
+                System.out.println("\n".repeat(1));
             }
-            if (menuInput.equals("4")) {}
+            if (menuInput.equals("4")) {
+                String daysChoice = ("""
+                    ---------------------------------
+                    |  What days you looking for?   |
+                    ---------------------------------
+                    | 1: Monday                     |
+                    | 2: Tuesday                    |
+                    | 3: Wednesday                  |
+                    | 4: Thursday                   |
+                    | 5: Friday                     |
+                    | 6: Saturday                   |
+                    | 7: Sunday                     |
+                    ---------------------------------
+                    """);
+                String userInput = UserInput.getStringInput(daysChoice);
+
+                //Reading the docs
+                String filePathDeals = "data/DealAvailability.txt";
+                daysMap = DocReader.daysReader(filePathDeals, userInput);
+                
+            }
 
             if (menuInput.equals("5")) {
                 break;

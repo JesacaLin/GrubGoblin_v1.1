@@ -4,3 +4,4 @@ ESTABLISHMENT_0ec14f97-1b37-40e7-ad37-a841761efbb8|sixpoint brewery|445 gold str
 ESTABLISHMENT_416af964-b0bc-4f7f-973c-d7274e316f3c|umi|3 chrome-2-8 minato city, minamiaoyama, tokyo|[35.6695345, 139.7225742]
 ESTABLISHMENT_6c49ab44-2465-4782-b3eb-ade2b3cd32a3|elsa|136 atlantic ave, brooklyn ny 11201|[40.6902602, -73.9953761]
 ESTABLISHMENT_d0dc0eb5-0972-4693-89b8-437781a2db78|piazza duomo|piazza risorgimento, 4, 12051 alba cn, italy|[44.7006229, 8.035891099999999]
+ESTABLISHMENT_12810f05-dead-418f-a137-ac357e2be293|ten ichi mart|118 smith st, brooklyn ny 11201|[40.6877739, -73.9900535]

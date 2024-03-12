@@ -4,3 +4,4 @@ DEAL_ef207dcc-5d9b-4598-8285-f156bbd32b6c|ESTABLISHMENT_0ec14f97-1b37-40e7-ad37-
 DEAL_a9a863fd-2ff4-422f-9de8-2e199431edc5|ESTABLISHMENT_416af964-b0bc-4f7f-973c-d7274e316f3c|Food Deal|sushi special
 DEAL_f26dfb8e-e9ac-4ef7-973b-7cffc5ecc7d4|ESTABLISHMENT_6c49ab44-2465-4782-b3eb-ade2b3cd32a3|Drinks Deal|$8 cocktails from 5 to 7 pm
 DEAL_476ab36d-96f7-4f66-b895-00b2609a5864|ESTABLISHMENT_d0dc0eb5-0972-4693-89b8-437781a2db78|Food Deal|free pizza for life!
+DEAL_acc15c14-be2d-4a61-892b-51ae6513279b|ESTABLISHMENT_12810f05-dead-418f-a137-ac357e2be293|Grocery Deal|50% off all sushi after 8pm
