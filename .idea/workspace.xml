@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fdaadf73-f95f-436e-a546-20c5a123fa29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DealAvailability.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/DealAvailability.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Deals.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Deals.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Establishment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Establishment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/JesacaLin/DocReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/DocReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/JesacaLin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/JesacaLin/Main.java" afterDir="false" />
     </list>
@@ -39,7 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Grub Goblin.executor": "Debug",
+    "Application.Grub Goblin.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -85,16 +82,5 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/JesacaLin/DocReader.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

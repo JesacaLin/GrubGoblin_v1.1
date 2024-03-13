@@ -1,4 +1,5 @@
 package org.JesacaLin;
+import java.sql.SQLOutput;
 import java.time.DayOfWeek;
 import java.util.*;
 public class Main {
@@ -131,13 +132,47 @@ public class Main {
                     ---------------------------------
                     """);
                 String userInput = UserInput.getStringInput(daysChoice);
-
+                String dayOfDeal = "";
+                switch (userInput) {
+                    case "1" -> dayOfDeal = "MONDAY";
+                    case "2" -> dayOfDeal = "TUESDAY";
+                    case "3" -> dayOfDeal = "WEDNESDAY";
+                    case "4" -> dayOfDeal = "THURSDAY";
+                    case "5" -> dayOfDeal = "FRIDAY";
+                    case "6" -> dayOfDeal = "SATURDAY";
+                    case "7" -> dayOfDeal = "SUNDAY";
+                }
                 //Reading the docs
                 String filePathDeals = "data/DealAvailability.txt";
-                daysMap = DocReader.daysReader(filePathDeals, userInput);
-                
+                daysMap = DocReader.daysReader(filePathDeals, dayOfDeal);
+                //if a map's value contains the user input, then search the deals array for value that contains the dealId, grab the establishment id, look in establishment map and get that info as well.
+                if (!daysMap.isEmpty()) {
+                    for(Map.Entry<String, List<String>> dayEntry : daysMap.entrySet()) {
+                        //Grab the value of the map entry
+                        List<String> mapValue = dayEntry.getValue();
+                        //iterate and look for days matching user input
+                            //if there is a match, split the string, first part is the dealsId, second is the day, store in variables
+                        for (String stringValue : mapValue) {
+                            if (stringValue.contains(dayOfDeal)) {
+                                String[] splitStringValue = stringValue.split("\\|");
+                                String dealId = splitStringValue[0];
+                                String dealInfoFromDealMap = null;
+                                for (String key : dealsMap.keySet()) {
+                                    if (key.contains(dealId)) {
+                                        dealInfoFromDealMap = dealsMap.get(key);
+                                        break;
+                                    }
+                                }
+                                if (dealInfoFromDealMap != null) {
+                                    System.out.println(dayOfDeal + "  --->  " + dealInfoFromDealMap);
+                                }
+                            }
+                        }
+                        System.out.println("*".repeat(12));
+                    }
+                }
+                System.out.println("\n".repeat(1));
             }
-
             if (menuInput.equals("5")) {
                 break;
             }

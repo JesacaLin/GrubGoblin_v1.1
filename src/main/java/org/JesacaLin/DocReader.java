@@ -39,22 +39,12 @@ public class DocReader  {
         return dealsMap;
     }
 
-    public static Map<String, List<String>> daysReader(String filePath, String userInput) {
+    public static Map<String, List<String>> daysReader(String filePath, String dayOfDeal) {
         Map<String, List<String>> daysMap = new HashMap<>();
         File dataFile = new File(filePath);
         try (Scanner dataInput = new Scanner(dataFile)) {
             while (dataInput.hasNextLine()) {
                 String lineOfInput = dataInput.nextLine();
-                String dayOfDeal = "";
-                switch (userInput) {
-                    case "1" -> dayOfDeal = "MONDAY";
-                    case "2" -> dayOfDeal = "TUESDAY";
-                    case "3" -> dayOfDeal = "WEDNESDAY";
-                    case "4" -> dayOfDeal = "THURSDAY";
-                    case "5" -> dayOfDeal = "FRIDAY";
-                    case "6" -> dayOfDeal = "SATURDAY";
-                    case "7" -> dayOfDeal = "SUNDAY";
-                }
                 if (lineOfInput.contains(dayOfDeal)) {
                     String[] parts = lineOfInput.split("\\|");
                     String availableId = parts[0];
@@ -62,12 +52,12 @@ public class DocReader  {
                     String daysString = parts[2].substring(1, parts[2].length() -1);
                     String[] daysArr = daysString.split(",");
                     List<String> daysMapArray = new ArrayList<>();
-                    //Looping through the daysArr and adding each day with the corresponding availableId and dealsId
+                    //Looping through the daysArr and adding each day with the corresponding dealsId
                     for (String day : daysArr) {
                         day = day.trim();
-                        daysMapArray.add(availableId + " | " + dealId + " | " + day);
+                        daysMapArray.add(dealId + "|" + day);
                     }
-                    //Adding the finished List as the Map's value
+                    //Adding the finished Array as the Map's value, the unique availableID is the key
                     daysMap.put(availableId, daysMapArray);
                 }
             }
